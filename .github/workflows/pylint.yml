@@ -18,6 +18,7 @@ jobs:
       run: | 
         python3 -m pip install --upgrade pyntcli
         pip install websocket
+        pynt command --cmd "export REQUESTS_CA_BUNDLE=rootCA.crt && python3 <your command here>" --ca-path rootCA.pem
     - name: get goat collection 
       run: | 
         curl https://raw.githubusercontent.com/pynt-io/pynt/main/goat_functional_tests/goat.postman_collection.json -o goat.json 
