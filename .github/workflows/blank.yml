@@ -18,6 +18,7 @@ jobs:
       run: | 
         python3 -m pip install --upgrade pyntcli
         pip install websocket
+        print("Pynt Secret: "+${{ secrets.YOURPYNTID }})
     - name: get goat collection 
       run: | 
         curl https://raw.githubusercontent.com/pynt-io/pynt/main/goat_functional_tests/goat.postman_collection.json -o goat.json 
